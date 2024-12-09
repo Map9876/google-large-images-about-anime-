@@ -1,5 +1,5 @@
 pattern_ = r'&imgrefurl=[^&]*'
-pattern_- = r'/imgres?imgurl='
+pattern__ = r'/imgres?imgurl='
 import os
 import re
 import time 
@@ -51,7 +51,7 @@ for resolution in range(start_resolution, end_resolution + 1):
             for a in soup.find_all('a',  href=True): 
                 if 'imgurl' in a['href']: 
                     link = re.sub(pattern_, "", a['href'])
-                    link = link.replace(pattern_-, "")
+                    link = link.replace(pattern__, "")
                     f.write(a['href']  + '\n') 
                     current_page_img_count += 1 
                     total_img_count += 1 
