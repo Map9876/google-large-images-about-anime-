@@ -26,6 +26,9 @@ jobs:
           pip3 install requests beautifulsoup4 lxml
       - name: Run
         run: python3 ./script.py
+      - name: Rungoogle724
+        run: python3 ./drivegoogledownload.py
+
 
       - name: Commit
         env:
