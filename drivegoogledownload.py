@@ -8,7 +8,7 @@ from typing import Union
 import collections
 import bs4
 import requests
-
+import itertools
 MAX_NUMBER_FILES = 50
 
 
