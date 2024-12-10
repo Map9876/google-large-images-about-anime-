@@ -93,7 +93,7 @@ def _download_and_parse_google_drive_link(
     quiet=False,
     remaining_ok=False,
     verify=True,
-    proxy_=None,
+    proxy_=proxy_,
 ):
     """Get folder structure of Google Drive folder URL."""
 
