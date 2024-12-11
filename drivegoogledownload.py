@@ -208,7 +208,7 @@ def download_folder(
         user_agent = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36"  # NOQA: E501
 
   #  sess = _get_session(proxy=proxy, use_cookies=use_cookies, user_agent=user_agent)
-    sess = requests.session()
+    sess = requests.session() #不需要import ，不过另外一个也只是session而已
 
 
     if not quiet:
@@ -229,6 +229,8 @@ def download_folder(
         print("Retrieving folder contents completed", file=sys.stderr)
         print("Building directory structure", file=sys.stderr)
     directory_structure = _get_directory_structure(gdrive_file, previous_path="")
+    #先跳过 不然下面没有import download函数会报错，先上面获取到文件id和文件名字结构即可
+    continue
     if not quiet:
         print("Building directory structure completed", file=sys.stderr)
 
