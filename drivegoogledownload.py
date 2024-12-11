@@ -234,8 +234,8 @@ def download_folder(
     
     if not quiet:
         print("Building directory structure completed", file=sys.stderr)
-    if 1==1:
-     continue
+    import sys
+    sys.exit()
     if output is None:
         output = os.getcwd() + osp.sep
     if output.endswith(osp.sep):
