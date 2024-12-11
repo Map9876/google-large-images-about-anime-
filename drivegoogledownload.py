@@ -167,9 +167,13 @@ def _get_directory_structure(gdrive_file, previous_path):
             directory_structure.append((None, osp.join(previous_path, file.name)))
             for i in _get_directory_structure(file, osp.join(previous_path, file.name)):
                 directory_structure.append(i)
+
         elif not file.children:
             directory_structure.append((file.id, osp.join(previous_path, file.name)))
-    print(directory_structure)
+    import time
+    time_ = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    with open(f"{time_}.txt") as txt:
+        txt.write(directory_structure)
     return directory_structure
 
 
@@ -281,5 +285,5 @@ def download_folder(
     
     
     
-download_folder(url="https://drive.google.com/drive/folders/1A87VRaW2dZnJDzSooHprUKI2JU4uwqwj?usp=sharing", proxy_="https://c.map987.us.kg/",)
+download_folder(url="https://drive.google.com/drive/folders/12B-sq_yFpj0tFBbybRPynqoT2fUn7Drb", proxy_="https://c.map987.us.kg/",)
 
