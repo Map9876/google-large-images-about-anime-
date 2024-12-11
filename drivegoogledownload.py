@@ -173,7 +173,7 @@ def _get_directory_structure(gdrive_file, previous_path):
     import time
     time_ = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
     with open(f"{time_}.txt", "w") as txt:
-        txt.write(directory_structure)
+        txt.write(str(directory_structure))
     return directory_structure
 
 
@@ -285,5 +285,6 @@ def download_folder(
     
     
     
-download_folder(url="https://drive.google.com/drive/folders/12B-sq_yFpj0tFBbybRPynqoT2fUn7Drb", proxy_="https://c.map987.us.kg/",)
-
+download_folder(url="https://drive.google.com/drive/folders/1QDqHqN3in-nJwG_b4k4-vlqYBkaCFrtz?usp=sharing", proxy_="https://c.map987.us.kg/",)
+#https://www.cosmocover.com/newsroom/crunchyroll-anime-awards-the-global-fan-celebration-of-anime-creators-returns-to-tokyo-on-may-25/
+#↑ https://drive.google.com/drive/folders/12B-sq_yFpj0tFBbybRPynqoT2fUn7Drb
