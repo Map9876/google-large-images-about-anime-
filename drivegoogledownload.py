@@ -172,7 +172,7 @@ def _get_directory_structure(gdrive_file, previous_path):
             directory_structure.append((file.id, osp.join(previous_path, file.name)))
     import time
     time_ = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
-    with open(f"{time_}.txt") as txt:
+    with open(f"{time_}.txt", "w") as txt:
         txt.write(directory_structure)
     return directory_structure
 
