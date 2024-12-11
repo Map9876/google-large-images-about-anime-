@@ -229,11 +229,13 @@ def download_folder(
         print("Retrieving folder contents completed", file=sys.stderr)
         print("Building directory structure", file=sys.stderr)
     directory_structure = _get_directory_structure(gdrive_file, previous_path="")
+    print(directory_structure)
     #先跳过 不然下面没有import download函数会报错，先上面获取到文件id和文件名字结构即可
-    continue
+    
     if not quiet:
         print("Building directory structure completed", file=sys.stderr)
-
+    if 1==1:
+     continue
     if output is None:
         output = os.getcwd() + osp.sep
     if output.endswith(osp.sep):
