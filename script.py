@@ -31,7 +31,7 @@ ua_list = [
     'Mozilla/5.0 (compatible; MSIE 9.0; Windows Phone OS 7.5; Trident/5.0; IEMobile/9.0; NOKIA; Lumia 900)' 
 ] 
  
-headers_list = [{'User - Agent': ua, 'Connection': 'close'} for ua in ua_list] 
+headers_list = [{'user-agent': ua, 'Connection': 'close'} for ua in ua_list] 
  
 for resolution in range(start_resolution, end_resolution + 1): 
     page_counter = start_page 
